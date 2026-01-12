@@ -74,18 +74,7 @@ with st.sidebar:
     st.info("Download the offline Windows version here.")
     
     # DOWNLOAD BUTTON
-    try:
-        with open("Kayonza_App.zip", "rb") as f:
-            st.download_button(
-                label="📥 Download .EXE",
-                data=f,
-                file_name="Kayonza_Weather_Station.zip",
-                mime="application/zip",
-                use_container_width=True
-            )
-    except:
-        st.warning("⚠️ App ZIP not found on server.")
-
+    st.link_button("📥 Download Windows App", "https://github.com/BIGCODEV/kayonza-weather/releases/download/v1.0/kayonza_new_system.zip", use_container_width=True)
 # --- 4. BACKEND LOGIC (Same as Desktop v27) ---
 LAT = -1.9536
 LON = 30.6545
